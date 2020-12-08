@@ -13,9 +13,9 @@ class CalendarsController < ApplicationController
   end
 
   private
-
   def plan_params
-    params.require(:calendars).permit(:date, :plan)
+    params.require(:plan).permit(:date, :plan)
+    # ストロングパラメーターの復習calendersというモデル名ではない。index.html.erbでモデル名を確認
   end
 
   def getWeek
